@@ -10,6 +10,25 @@
     <style>
       html, body, #root { height: 100%; margin: 0; padding: 0; overscroll-behavior: none; }
       body { background: #EDE7DA; }
+
+      /* Bolt "Made in Bolt" белгісін төменгі навигацияға кедергі келтірмейтін жерге жылжыту */
+      [class*="bolt-badge"],
+      [class*="bolt-watermark"],
+      [id*="bolt-badge"],
+      [id*="made-in-bolt"],
+      iframe[src*="bolt"],
+      a[href*="bolt.new"][target="_blank"] {
+        position: fixed !important;
+        bottom: 4px !important;
+        right: 4px !important;
+        top: auto !important;
+        left: auto !important;
+        z-index: 9999 !important;
+        opacity: 0.5 !important;
+        pointer-events: auto !important;
+        transform: scale(0.7) !important;
+        transform-origin: bottom right !important;
+      }
     </style>
   </head>
   <body>
